@@ -1,2 +1,23 @@
-<h1>Memories#index</h1>
-<p>Find me in app/views/memories/index.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div>
+      <h1>Memories</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>title</th>
+            <th>content</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @memories.each do |memory| %>
+          <tr>
+            <td><%= memory.title %></td>
+            <td><%= memory.body %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
