@@ -6,6 +6,10 @@ class MemoriesController < ApplicationController
   end
 
   def new
+    @memory = Memory.new
+  end
+  
+  def create
   end
 
   def edit
