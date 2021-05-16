@@ -7,6 +7,7 @@
           <tr>
             <th>title</th>
             <th>content</th>
+            <th>image</th>
           </tr>
         </thead>
         <tbody>
@@ -14,6 +15,7 @@
           <tr>
             <td><%= link_to memory.title, memory_path(memory.id) %></td>
             <td><%= memory.body %></td>
+            <td><%= attachment_image_tag memory, :image, size:'40x40', format: 'jpeg' %></td>
           </tr>
           <% end %>
         </tbody>

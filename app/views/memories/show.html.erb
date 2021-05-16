@@ -5,6 +5,8 @@
       <p><%= @memory.title %></p>
       <h2>本文</h2>
       <p><%= @memory.body %></p>
+      <h2>画像</h2>
+      <%= attachment_image_tag @memory, :image, size:'300x300', format: 'jpeg' %>
       <%= link_to "編集", edit_memory_path(@memory.id) %>
     </div>
   </div>

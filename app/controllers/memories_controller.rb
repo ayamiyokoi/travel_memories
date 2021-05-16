@@ -29,6 +29,6 @@ class MemoriesController < ApplicationController
   
   private
   def memory_params
-    params.require(:memory).permit(:title, :body)
+    params.require(:memory).permit(:title, :body, :image)
   end
 end
