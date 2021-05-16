@@ -12,7 +12,7 @@
         <tbody>
           <% @memories.each do |memory| %>
           <tr>
-            <td><%= memory.title %></td>
+            <td><%= link_to memory.title, memory_path(memory.id) %></td>
             <td><%= memory.body %></td>
           </tr>
           <% end %>

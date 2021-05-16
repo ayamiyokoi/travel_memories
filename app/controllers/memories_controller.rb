@@ -4,6 +4,7 @@ class MemoriesController < ApplicationController
   end
 
   def show
+    @memory = Memory.find(params[:id])
   end
 
   def new
@@ -13,7 +14,7 @@ class MemoriesController < ApplicationController
   def create
     memory = Memory.new(memory_params)
     memory.save
-    redirect_to memory_path(params[:id])
+    redirect_to memory_path(memory.id)
   end
 
   def edit
