@@ -18,6 +18,13 @@ class MemoriesController < ApplicationController
   end
 
   def edit
+    @memory = Memory.find(params[:id])
+  end
+  
+  def update
+    memory = Memory.find(params[:id])
+    memory.update(memory_params)
+    redirect_to memory_path(memory.id)
   end
   
   private

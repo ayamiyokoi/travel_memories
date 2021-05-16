@@ -1,2 +1,14 @@
-<h1>Memories#edit</h1>
-<p>Find me in app/views/memories/edit.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div>
+      <h1>編集画面</h1>
+      <%= form_with model:@memory, url:edit_memory_path(@memory.id), local:true do |f| %>
+      <h4>タイトル</h4>
+      <%= f.text_field :title %>
+      <h4>本文</h4>
+      <%= f.text_area :body %>
+      <%= f.submit '保存' %>
+      <% end %>
+    </div>
+  </div>
+</div>
